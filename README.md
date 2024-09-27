@@ -1,4 +1,7 @@
 # draw-a-sign-of-pastel-palettes
 assignment1 of capstone workshop
 
-drawing a picturee using turtle lib
+Drawing a picturee using turtle lib
+
+The drawn image is below \
+![image](drawing.png)
