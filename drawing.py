@@ -1,10 +1,12 @@
 import turtle
 import math
 from PIL import Image
+import time
+import imageio
 
-l = 44 # length
+l = 40 # length
 r = l / math.sqrt(3) # radius
-gap = 12 # gap length
+gap = 10 # gap length
 angle = math.pi / 2
 
 # setup the window
@@ -37,7 +39,7 @@ for i in range(6):
 r = gap/2 + l / math.sqrt(3)
 
 t.penup()
-t.pensize(3)
+t.pensize(2)
 t.goto(math.sqrt(3) / 2 * r, 1.5 * r)
 
 # draw the frame
@@ -46,5 +48,11 @@ for i in range(6):
     t.left(60)
     t.circle(r, 240)
     t.left(120)
+
+t.hideturtle()
+canvas = screen.getcanvas()
+canvas.postscript(file="drawing.eps")
+img = Image.open('drawing.eps')
+img.save('drawing.png')
 
 turtle.done()
